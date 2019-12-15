@@ -17,6 +17,7 @@ public class startStory
 		 choose = StoryTime.intInput.nextInt() -1;
 		if(choose == 0)
 		{
+			
 			ChooseCharacter.storyOne();
 		}
 		else if(choose == 1)

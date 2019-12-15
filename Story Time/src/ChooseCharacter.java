@@ -4,8 +4,9 @@ public class ChooseCharacter
 	static int character;
 public static void storyOne()
 {
+	StoryTime.stories[startStory.choose].setting = "dirt road";
 	startStory.list =1;
-	System.out.println("You chose " + StoryTime.stories[startStory.choose].name + ". Let's get started! ");
+	System.out.println("You chose " + StoryTime.stories[startStory.choose].name + ". Let's get started! The Setting to start off is " + StoryTime.stories[startStory.choose].setting +"." );
 
 	StoryTime.players[0] = new Characters();
 	StoryTime.players[0].name = "the eldest brother";
@@ -57,6 +58,7 @@ public static void chooseCharacters()
 		 System.out.println("You chose " + StoryTime.players[0].name + " He is described as " +
 	 StoryTime.players[0].build + ". He has " + StoryTime.players[0].hairColor + " colored hair. Good luck.");
 		 lives();
+		 ThreeBrothersOlder.firstChoice();
 	 }
 	 if(character ==1) 
 	 {
@@ -74,11 +76,15 @@ public static void chooseCharacters()
 	 {
 		 System.out.println("You chose " + StoryTime.players[3].name + " He is described as " +
 				 StoryTime.players[3].build + ". He has " + StoryTime.players[3].hairColor + " colored hair. Good luck.");
-					 lives();
+					 
 	 }	
 }
 public static void lives()
 {
 	System.out.println("You have " + StoryTime.players[character].lives + " lives left.");
+	if ( StoryTime.players[character].lives == 0)
+	{
+		System.out.println("Your dead for better or for worse. You met Death and he laughed. Thank you for playing");
+	}
 }
 }
