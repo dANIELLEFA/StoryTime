@@ -1,7 +1,7 @@
 
 public class books extends story
 {
-protected String setting;
+ String setting;
 	@Override
 	public void makeNoise()
 	{

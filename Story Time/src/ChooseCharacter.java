@@ -6,6 +6,7 @@ public static void storyOne()
 {
 	startStory.list =1;
 	System.out.println("You chose " + StoryTime.stories[startStory.choose].name + ". Let's get started! ");
+
 	StoryTime.players[0] = new Characters();
 	StoryTime.players[0].name = "the eldest brother";
 	StoryTime.players[0].firstLine= "You guys are so slow";
@@ -24,7 +25,19 @@ public static void storyOne()
 	StoryTime.players[3] = new Characters();
 	StoryTime.players[3].name = "Death";
 	StoryTime.players[3].firstLine = "No one gets past me";
+	StoryTime.players[3].build ="gloomy";
+	StoryTime.players[3].hairColor ="black";
 	
+	System.out.println( "Here is a list of characters you can play:");
+	for(int i = 0; i < StoryTime.players.length; i++)
+	{
+		
+			System.out.println( startStory.list + ". " + StoryTime.players[i].name);
+			
+			startStory.list++;
+		
+	}
+	chooseCharacters();
 }
 public static void storyTwo()
 {
@@ -36,20 +49,7 @@ public static void storyThree()
 }
 public static void chooseCharacters()
 {
-	System.out.println( "Here is a list of characters you can play:");
-	for(int i = 0; i < StoryTime.players.length; i++)
-	{
-		if(StoryTime.players[i].name.equals(null))
-		{
-			startStory.list = startStory.list;
-		}
-		else
-		{
-			System.out.println( startStory.list + ". " + StoryTime.players[i].name);
-			
-			startStory.list++;
-		}
-	}
+	
 	System.out.println("Choose one of the characters");
 	 character = StoryTime.intInput.nextInt() -1;
 	 if(character ==0) 
@@ -79,6 +79,6 @@ public static void chooseCharacters()
 }
 public static void lives()
 {
-	System.out.println("You have " + StoryTime.players[character].lives + "left.");
+	System.out.println("You have " + StoryTime.players[character].lives + " lives left.");
 }
 }
