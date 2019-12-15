@@ -1,5 +1,5 @@
 
-public abstract class spells extends magicStuff
+public  class spells extends magicStuff
 	{
 		
 		
