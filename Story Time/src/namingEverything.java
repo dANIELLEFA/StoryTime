@@ -19,6 +19,7 @@ public class namingEverything
 
 			StoryTime.furniture[0] = new furniture();
 			StoryTime.furniture[0].name = "bed";
+			
 			StoryTime.furniture[1] = new furniture();
 			StoryTime.furniture[1].name = "chair";
 			StoryTime.furniture[2] = new furniture();
@@ -34,10 +35,13 @@ public class namingEverything
 		{
 			StoryTime.backpack[0] = new handheldStuff();
 			StoryTime.backpack[0].name = "wand";
+			StoryTime.backpack[0].weight = 5;
 			StoryTime.backpack[1] = new handheldStuff();
 			StoryTime.backpack[1].name = "Cloak of Invisibility";
+			StoryTime.backpack[0].weight = 7;
 			StoryTime.backpack[2] = new handheldStuff();
 			StoryTime.backpack[2].name = "resurrection stone";
+			StoryTime.backpack[0].weight = 10;
 		}
 		public static void spells()
 		{

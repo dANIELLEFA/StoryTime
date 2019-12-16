@@ -1,6 +1,7 @@
 
-public class handheldStuff extends magicStuff
+public  class handheldStuff extends magicStuff
 	{
+		protected int weight;
 	
 	@Override
 		public void makeNoise()

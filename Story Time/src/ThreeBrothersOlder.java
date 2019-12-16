@@ -86,6 +86,8 @@ public static void fightScene()
 		}
 		
 		 startStory.choose = StoryTime.intInput.nextInt() -1 ;
+		 StoryTime.spell[startStory.choose ].makeNoise();
+		 StoryTime.spell[startStory.choose ].createSparks();
 		 System.out.println("I chose " + StoryTime.spell[startStory.choose ].name + ". My opponent used " + StoryTime.spell[opponent ].name +".");
 		 if(startStory.choose < opponent )
 		 {
@@ -106,6 +108,7 @@ public static void fightScene()
 		 if(dying ==0 ||  opponent ==0 )
 		 {
 			 System.out.println("Your died");
+			 StoryTime.players[ChooseCharacter.character].lives = 0;
 			 stillFighting = false;
 			 ChooseCharacter.lives();
 		 }

@@ -58,6 +58,8 @@ public static void chooseCharacters()
 		 System.out.println("You chose " + StoryTime.players[0].name + " He is described as " +
 	 StoryTime.players[0].build + ". He has " + StoryTime.players[0].hairColor + " colored hair. Good luck.");
 		 lives();
+		 StoryTime.stories[character].openBook();
+		 StoryTime.stories[0].loading();
 		 ThreeBrothersOlder.firstChoice();
 	 }
 	 if(character ==1) 
@@ -65,18 +67,23 @@ public static void chooseCharacters()
 		 System.out.println("You chose " + StoryTime.players[1].name + " He is described as " +
 				 StoryTime.players[1].build + ". He has " + StoryTime.players[1].hairColor + " colored hair. Good luck.");
 					 lives();
+					 StoryTime.stories[character].openBook();
+					 StoryTime.stories[0].loading();
 	 }
 	 if(character ==2) 
 	 {
 		 System.out.println("You chose " + StoryTime.players[2].name + " He is described as " +
 				 StoryTime.players[2].build + ". He has " + StoryTime.players[2].hairColor + " colored hair. Good luck.");
+		 StoryTime.stories[character].openBook();
+		 StoryTime.stories[0].loading();
 					 lives(); 
 	 }
 	 if(character ==3) 
 	 {
 		 System.out.println("You chose " + StoryTime.players[3].name + " He is described as " +
 				 StoryTime.players[3].build + ". He has " + StoryTime.players[3].hairColor + " colored hair. Good luck.");
-					 
+		 StoryTime.stories[character].openBook();
+		 StoryTime.stories[0].loading();
 	 }	
 }
 public static void lives()
@@ -85,6 +92,9 @@ public static void lives()
 	if ( StoryTime.players[character].lives == 0)
 	{
 		System.out.println("Your dead for better or for worse. You met Death and he laughed. Thank you for playing");
+		 StoryTime.stories[character].closeBook();
+		 System.exit(0);
 	}
+	
 }
 }

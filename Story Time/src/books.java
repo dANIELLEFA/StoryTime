@@ -1,5 +1,5 @@
 
-public class books extends story
+public class books extends handheldStuff
 {
 protected String setting;
 public void closeBook()

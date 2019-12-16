@@ -6,7 +6,7 @@ public class startStory
 	public static void chooseStory()
 	{
 		System.out.println("Hello user. Here are the stories in store for you today:");
-		loading();
+		StoryTime.stories[0].loading();
 		for(int i = 0; i< StoryTime.stories.length;i++)
 		{
 			System.out.println(list +"." +StoryTime.stories[i].name);
@@ -33,35 +33,6 @@ public class startStory
 			chooseStory();
 		}
 	}
-	public static  void delay()
-	{
-		try
-			{
-				Thread.sleep(1000);
-			}catch(InterruptedException e){
-				
-				e.printStackTrace();
-			}
-		// delays
-	}
-	public static void loading()
-	{
-		// shows loading
-		System.out.print("L");
-		delay();
-		System.out.print("O");
-		delay();
-		System.out.print("A");
-		delay();
-		System.out.print("D");
-		delay();
-		System.out.print("I");
-		delay();
-		System.out.print("N");
-		delay();
-		System.out.print("G");
-		delay();
-		System.out.println();
-	}
+	
 
 }
